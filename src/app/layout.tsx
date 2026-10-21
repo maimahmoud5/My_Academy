@@ -9,6 +9,7 @@ import { AttributionCapture } from "@/components/AttributionCapture";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
 import { absoluteUrl } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -74,6 +75,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Footer />
         <MobileStickyBar />
         <CookieConsent />
+        <Analytics />
       </body>
     </html>
   );
